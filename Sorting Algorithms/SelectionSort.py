@@ -1,20 +1,4 @@
 def selection_sort(arr):
-
-    if arr is None:
-        raise ValueError("Input array cannot be None.")
-    
-    if not isinstance(arr, list):
-        raise TypeError("Input must be a list.")
-    
-    if len(arr) == 0:
-        return arr
-
-    if len(arr) == 1:
-        return arr
-
-    for element in arr:
-        if not (isinstance(element, int) or isinstance(element, float)):
-            raise TypeError("Array must contain only numbers (int or float).")
     
     n = len(arr)
 
