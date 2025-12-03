@@ -21,11 +21,8 @@ def selection_sort(arr):
     for i in range(n - 1):
         min_idx = i
         for j in range(i + 1, n):
-            try:
-                if arr[j] < arr[min_idx]:
-                    min_idx = j
-            except Exception:
-                raise TypeError(f"Elements {arr[j]} and {arr[min_idx]} cannot be compared.")
+            if arr[j] < arr[min_idx]:
+                min_idx = j
         arr[i], arr[min_idx] = arr[min_idx], arr[i]
     return arr
 
