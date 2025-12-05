@@ -1,8 +1,21 @@
 # Merge Sort in Python
 def merge_sort(arr):
     
-    if len(arr) <= 1:
+    if arr is None:
+        raise ValueError("Input array cannot be None.")
+
+    if not isinstance(arr, list):
+        raise TypeError("Input must be a list.")
+
+    if len(arr) == 0:
+        return []
+
+    if len(arr) == 1:
         return arr
+
+    for element in arr:
+        if not (isinstance(element, int) or isinstance(element, float)):
+            raise TypeError("Array must contain only numbers (int or float).")
     
     mid = len(arr) // 2
     left = merge_sort(arr[:mid])
