@@ -22,8 +22,8 @@ def linear_search(arr, target):
     return -1
 
 
-array = ["64", "25", "12", "22", "11"]
-target = "11"
+array = [11, 12, 22, 25, 64]
+target = 25
 print("Array:", array)
 print("Target:", target)
 index = linear_search(array, target)
